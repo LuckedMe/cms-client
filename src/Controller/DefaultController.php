@@ -7,16 +7,21 @@ namespace App\Controller;
 use App\Contract\Dictionary\PageType;
 use App\Service\CmsAdmin\PageService;
 use App\Service\CmsAdmin\SiteService;
+use Psr\Cache\InvalidArgumentException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Requirement\Requirement;
 
 use function sprintf;
 
 class DefaultController extends AbstractController
 {
+    /**
+     * @throws InvalidArgumentException
+     */
     #[Route(
         path: '',
         name: 'web.homepage',
@@ -26,7 +31,7 @@ class DefaultController extends AbstractController
     #[Route(
         path: '/{slug}',
         name: 'web.cms',
-        requirements: ['slug' => '[a-zA-Z0-9\-\/]+'],
+        requirements: ['slug' => Requirement::ASCII_SLUG],
         methods: ['GET', 'POST'],
     )]
     public function __invoke(

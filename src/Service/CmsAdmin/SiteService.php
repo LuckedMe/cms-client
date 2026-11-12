@@ -8,6 +8,7 @@ use App\DTO\Data\SiteDTO;
 use App\DTOFactory\Data\SiteDTOFactory;
 use App\Exception\CommunicationException;
 use App\Service\CmsAdmin\Traits\ResolveErrorsDetailsTrait;
+use Psr\Cache\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Contracts\Cache\CacheInterface;
 use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
@@ -37,6 +38,9 @@ final readonly class SiteService
     ) {
     }
 
+    /**
+     * @throws InvalidArgumentException
+     */
     public function getSite(?bool $throwException = false): ?SiteDTO
     {
         $key = sha1('site');
