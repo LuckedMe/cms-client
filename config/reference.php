@@ -742,12 +742,26 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     intercept_redirects?: bool|Param, // Default: false
  *     excluded_ajax_paths?: scalar|Param|null, // Default: "^/((index|app(_[\\w]+)?)\\.php/)?_wdt"
  * }
+ * @psalm-type VtsotCmsAdminClientConfig = array{
+ *     api_auth_url?: scalar|Param|null,
+ *     api_content_url?: scalar|Param|null,
+ *     locale?: scalar|Param|null, // Default: "en_GB"
+ *     site_id?: scalar|Param|null,
+ *     site_token?: scalar|Param|null,
+ *     client_username?: scalar|Param|null,
+ *     client_password?: scalar|Param|null,
+ *     caching?: bool|Param, // Default: true
+ *     cache_clear_pools?: list<scalar|Param|null>,
+ *     cache_default_lifetime?: int|Param, // Default: 1800
+ *     cache_banner_lifetime?: int|Param, // Default: 300
+ * }
  * @psalm-type ConfigType = array{
  *     imports?: ImportsConfig,
  *     parameters?: ParametersConfig,
  *     services?: ServicesConfig,
  *     framework?: FrameworkConfig,
  *     twig?: TwigConfig,
+ *     vtsot_cms_admin_client?: VtsotCmsAdminClientConfig,
  *     "when@dev"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
@@ -755,6 +769,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         framework?: FrameworkConfig,
  *         twig?: TwigConfig,
  *         web_profiler?: WebProfilerConfig,
+ *         vtsot_cms_admin_client?: VtsotCmsAdminClientConfig,
  *     },
  *     "when@prod"?: array{
  *         imports?: ImportsConfig,
@@ -762,6 +777,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         services?: ServicesConfig,
  *         framework?: FrameworkConfig,
  *         twig?: TwigConfig,
+ *         vtsot_cms_admin_client?: VtsotCmsAdminClientConfig,
  *     },
  *     "when@test"?: array{
  *         imports?: ImportsConfig,
@@ -770,6 +786,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         framework?: FrameworkConfig,
  *         twig?: TwigConfig,
  *         web_profiler?: WebProfilerConfig,
+ *         vtsot_cms_admin_client?: VtsotCmsAdminClientConfig,
  *     },
  *     ...<string, ExtensionType|array{ // extra keys must follow the when@%env% pattern or match an extension alias
  *         imports?: ImportsConfig,

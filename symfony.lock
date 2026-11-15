@@ -123,5 +123,8 @@
             "config/packages/web_profiler.yaml",
             "config/routes/web_profiler.yaml"
         ]
+    },
+    "vtsot/cms-admin-client-bundle": {
+        "version": "dev-main"
     }
 }
