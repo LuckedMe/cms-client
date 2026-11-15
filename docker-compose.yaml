@@ -9,7 +9,7 @@ services:
         restart: unless-stopped
         extra_hosts:
             - "cms-client.local:host-gateway"
-            - "api.cms-admin.local:host-gateway"
+            - "cms-admin.local:host-gateway"
         volumes:
             - ./:/var/www/html:rw
         networks:

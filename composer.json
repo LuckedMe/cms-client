@@ -3,6 +3,12 @@
     "license": "proprietary",
     "minimum-stability": "stable",
     "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/vtsot/cms-admin-client-bundle"
+        }
+    ],
     "require": {
         "php": ">=8.4",
         "ext-ctype": "*",
@@ -14,14 +20,8 @@
         "symfony/framework-bundle": "8.1.*",
         "symfony/http-client": "8.1.*",
         "symfony/runtime": "8.1.*",
-        "vtsot/cms-admin-client-bundle": "*"
+        "vtsot/cms-admin-client-bundle": "dev-main"
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../cms-admin-client-bundle"
-        }
-    ],
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.95.30",
         "phpunit/phpunit": "^13.4.7",

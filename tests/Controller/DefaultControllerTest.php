@@ -106,6 +106,6 @@ final class DefaultControllerTest extends WebTestCase
 
     private function mockContent(callable|ResponseInterface $response): void
     {
-        self::getContainer()->set(self::CONTENT_CLIENT, new MockHttpClient($response, 'https://api.cms-admin.local/sites/1/'));
+        self::getContainer()->set(self::CONTENT_CLIENT, new MockHttpClient($response, 'https://cms-admin.local/api/sites/1/'));
     }
 }
