@@ -742,7 +742,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     intercept_redirects?: bool|Param, // Default: false
  *     excluded_ajax_paths?: scalar|Param|null, // Default: "^/((index|app(_[\\w]+)?)\\.php/)?_wdt"
  * }
- * @psalm-type VtsotCmsAdminClientConfig = array{
+ * @psalm-type LuckedMeCmsClientConfig = array{
  *     api_auth_url?: scalar|Param|null,
  *     api_content_url?: scalar|Param|null,
  *     locale?: scalar|Param|null, // Default: "en_GB"
@@ -752,8 +752,8 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     client_password?: scalar|Param|null,
  *     caching?: bool|Param, // Default: true
  *     cache_clear_pools?: list<scalar|Param|null>,
- *     cache_default_lifetime?: int|Param, // Default: 1800
- *     cache_banner_lifetime?: int|Param, // Default: 300
+ *     cache_default_lifetime?: int|Param, // Default: 86400
+ *     cache_banner_lifetime?: int|Param, // Default: 3600
  * }
  * @psalm-type ConfigType = array{
  *     imports?: ImportsConfig,
@@ -761,7 +761,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *     services?: ServicesConfig,
  *     framework?: FrameworkConfig,
  *     twig?: TwigConfig,
- *     vtsot_cms_admin_client?: VtsotCmsAdminClientConfig,
+ *     lucked_me_cms_client?: LuckedMeCmsClientConfig,
  *     "when@dev"?: array{
  *         imports?: ImportsConfig,
  *         parameters?: ParametersConfig,
@@ -769,7 +769,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         framework?: FrameworkConfig,
  *         twig?: TwigConfig,
  *         web_profiler?: WebProfilerConfig,
- *         vtsot_cms_admin_client?: VtsotCmsAdminClientConfig,
+ *         lucked_me_cms_client?: LuckedMeCmsClientConfig,
  *     },
  *     "when@prod"?: array{
  *         imports?: ImportsConfig,
@@ -777,7 +777,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         services?: ServicesConfig,
  *         framework?: FrameworkConfig,
  *         twig?: TwigConfig,
- *         vtsot_cms_admin_client?: VtsotCmsAdminClientConfig,
+ *         lucked_me_cms_client?: LuckedMeCmsClientConfig,
  *     },
  *     "when@test"?: array{
  *         imports?: ImportsConfig,
@@ -786,7 +786,7 @@ use Symfony\Component\Config\Loader\ParamConfigurator as Param;
  *         framework?: FrameworkConfig,
  *         twig?: TwigConfig,
  *         web_profiler?: WebProfilerConfig,
- *         vtsot_cms_admin_client?: VtsotCmsAdminClientConfig,
+ *         lucked_me_cms_client?: LuckedMeCmsClientConfig,
  *     },
  *     ...<string, ExtensionType|array{ // extra keys must follow the when@%env% pattern or match an extension alias
  *         imports?: ImportsConfig,

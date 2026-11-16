@@ -13,8 +13,8 @@ use Symfony\Contracts\HttpClient\ResponseInterface;
 
 final class DefaultControllerTest extends WebTestCase
 {
-    private const string AUTH_CLIENT    = 'vtsot_cms_admin_client.auth.http_client';
-    private const string CONTENT_CLIENT = 'vtsot_cms_admin_client.content.http_client';
+    private const string AUTH_CLIENT    = 'lucked_me_cms_client.auth.http_client';
+    private const string CONTENT_CLIENT = 'lucked_me_cms_client.content.http_client';
 
     public function testHomepageRendersHomepageContent(): void
     {

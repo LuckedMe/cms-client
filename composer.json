@@ -1,4 +1,5 @@
 {
+    "name": "lucked-me/cms-client",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
@@ -6,21 +7,21 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/vtsot/cms-admin-client-bundle"
+            "url": "https://github.com/LuckedMe/cms-client-bundle"
         }
     ],
     "require": {
         "php": ">=8.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "lucked-me/cms-client-bundle": "dev-main",
         "nesbot/carbon": "^3.15",
         "symfony/console": "8.1.*",
         "symfony/dotenv": "8.1.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "8.1.*",
         "symfony/http-client": "8.1.*",
-        "symfony/runtime": "8.1.*",
-        "vtsot/cms-admin-client-bundle": "dev-main"
+        "symfony/runtime": "8.1.*"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.95.30",
@@ -45,8 +46,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/",
-            "Vtsot\\CmsAdminClientBundle\\Tests\\": "src-cms-admin-client-bundle/tests/"
+            "App\\Tests\\": "tests/"
         }
     },
     "replace": {

@@ -11,6 +11,9 @@
             ".php-cs-fixer.dist.php"
         ]
     },
+    "lucked-me/cms-client-bundle": {
+        "version": "dev-main"
+    },
     "phpunit/phpunit": {
         "version": "13.4",
         "recipe": {
@@ -123,8 +126,5 @@
             "config/packages/web_profiler.yaml",
             "config/routes/web_profiler.yaml"
         ]
-    },
-    "vtsot/cms-admin-client-bundle": {
-        "version": "dev-main"
     }
 }
